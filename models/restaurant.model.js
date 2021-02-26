@@ -17,10 +17,10 @@ const schema = new mongoose.Schema(
     latitude: { type: String, required: true },
     longitude: { type: String, required: true },
     phone_number: { type: String, required: true },
-    is_open: { type: Boolean, required: true },
+    is_open: { type: Boolean, default: false },
     time_available: [
       {
-        is_open: { type: Boolean, required: true },
+        is_open: { type: Boolean, default: null },
         open_time: { type: Date, default: null },
       },
     ],
