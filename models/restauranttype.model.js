@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
 const { DB_TIMESTAMP_CONFIG } = require("../utils/common-func");
 
-const model_name = "restauranttype";
+const model_name = "restaurant_type";
 
 const schema = new mongoose.Schema(
   {
-    field: { type: String, required: true },
-    reference: { type: mongoose.Schema.Types.ObjectId, ref: "collection_name" },
+    la: { type: String, required: true },
+    en: { type: String, required: true },
+    numeric: { type: Number, required: true, unique: true },
     deleted_at: { type: Date, default: null },
   },
   DB_TIMESTAMP_CONFIG
