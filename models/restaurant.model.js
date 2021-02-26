@@ -9,7 +9,7 @@ const model_name = "restaurant";
 const schema = new mongoose.Schema(
   {
     user_id: { type: mongoose.Schema.Types.ObjectId, ref: UserModelName },
-    employee_id: [{ type: mongoose.Schema.Types.ObjectId, ref: UserModelName }],
+    employee_id: [{ type: mongoose.Schema.Types.ObjectId, ref: UserModelName, default: null }],
     restaurant_type_id: { type: mongoose.Schema.Types.ObjectId, ref: RestaurantTypeModelName },
     village_id: { type: mongoose.Schema.Types.ObjectId, ref: VillagesModel },
     name: { type: String, required: true },
