@@ -6,10 +6,11 @@ const model_name = "table";
 
 const schema = new mongoose.Schema(
   {
-    restaurant: { type: mongoose.Schema.Types.ObjectId, ref: RestaurantModelName },
+    restaurant_id: { type: mongoose.Schema.Types.ObjectId, ref: RestaurantModelName },
     capacity: { type: Number, required: true },
     img: [{ type: String, required: true }],
     is_meal_required: { type: Boolean, required: true },
+    is_paid_required: { type: Boolean, default: false },
     table_no: { type: Number, required: true },
     is_available: { type: Boolean, default: false },
     deleted_at: { type: Date, default: null },

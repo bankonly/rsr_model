@@ -11,6 +11,7 @@ const schema = new mongoose.Schema(
     la: { type: String, required: true },
     restaurant_id: { type: mongoose.Schema.Types.ObjectId, ref: RestaurantModelName, required: true },
     meal_type_id: { type: mongoose.Schema.Types.ObjectId, ref: MealTypeModelName, required: true },
+    price: { type: Number, default: null },
     deleted_at: { type: Date, default: null },
   },
   DB_TIMESTAMP_CONFIG
